@@ -1,0 +1,35 @@
+@use './functions' as fun;
+
+// Breakpoints
+$breakpoint-tablet: 1024px;
+$breakpoint-desktop: 1728px;
+
+// Font Families
+$font-main: 'Poppins', sans-serif;
+$font-brand: 'Josefin Sans', sans-serif;
+
+// Font Weights
+$weight-light: 300;
+$weight-regular: 400;
+$weight-medium: 500;
+$weight-bold: 700;
+
+// Solid Colors
+$color-primary: #000000;
+$color-secondary: #eb9b00;
+$color-light: #ffffff;
+$color-bg-light: #ebecee;
+
+// Gradient colors
+$gradient-start: #002f52;
+$gradient-end: #326589;
+$gradient-primary: linear-gradient(to right, $gradient-start, $gradient-end);
+
+// Font Sizes (Input as px, compiled to rem)
+$size-xs: fun.to-rem(12px);
+$size-sm: fun.to-rem(14px);
+$size-base: fun.to-rem(16px);
+$size-md: fun.to-rem(20px);
+$size-lg: fun.to-rem(24px);
+$size-xl: fun.to-rem(32px);
+$size-xxl: fun.to-rem(48px);
