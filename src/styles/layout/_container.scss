@@ -1,0 +1,14 @@
+@use '../abstracts' as abs;
+
+.container {
+    width: 100%;
+    margin-inline: auto;
+    @include abs.tablet {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    @include abs.desktop {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+}

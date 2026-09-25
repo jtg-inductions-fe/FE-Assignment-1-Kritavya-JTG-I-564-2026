@@ -1,13 +1,124 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Title</title>
+        <title>AluraBooks</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="src/styles/main.scss" />
     </head>
     <body>
-        <div>Hello World</div>
+        <header class="header">
+            <div class="header__container container">
+                <div class="header__left">
+                    <button
+                        class="nav-toggle header__toggle"
+                        type="button"
+                        aria-label="Open menu"
+                        aria-expanded="false"
+                        aria-controls="main-navigation"
+                    >
+                        <i
+                            class="icon-menu nav-toggle__icon"
+                            aria-hidden="true"
+                        ></i>
+                    </button>
+
+                    <div class="brand header__brand">
+                        <a href="#" class="brand__link" aria-label="AluraBooks">
+                            <i
+                                class="icon-logo brand__logo-icon"
+                                aria-hidden="true"
+                            ></i>
+
+                            <h1 class="brand__title">
+                                <span class="brand__title-emphasis">Alura</span
+                                >Books
+                            </h1>
+                        </a>
+                    </div>
+                </div>
+
+                <nav
+                    id="main-navigation"
+                    class="header__nav"
+                    aria-label="Main navigation"
+                >
+                    <div class="category-dropdown">
+                        <a
+                            href="#"
+                            class="category-dropdown__trigger"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                        >
+                            Categories
+                        </a>
+
+                        <div class="category-dropdown__menu">
+                            <ul class="category-dropdown__list">
+                                <li class="category-dropdown__item">
+                                    <a href="#" class="category-dropdown__link">
+                                        PROGRAMMING
+                                    </a>
+                                </li>
+                                <li class="category-dropdown__item">
+                                    <a href="#" class="category-dropdown__link">
+                                        FRONT-END
+                                    </a>
+                                </li>
+                                <li class="category-dropdown__item">
+                                    <a href="#" class="category-dropdown__link">
+                                        INFRASTRUCTURE
+                                    </a>
+                                </li>
+                                <li class="category-dropdown__item">
+                                    <a href="#" class="category-dropdown__link">
+                                        BUSINESS
+                                    </a>
+                                </li>
+                                <li class="category-dropdown__item">
+                                    <a href="#" class="category-dropdown__link">
+                                        DESIGN &amp; UX
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <a href="#" class="header__nav-link"> Favorites </a>
+
+                    <a href="#" class="header__nav-link"> My Bookshelf </a>
+                </nav>
+
+                <div class="header__right">
+                    <a
+                        href="#"
+                        class="action-btn header__action-item header__action-item--favorites"
+                        aria-label="My Favorites"
+                    >
+                        <i
+                            class="icon-favorites action-btn__icon"
+                            aria-hidden="true"
+                        ></i>
+                    </a>
+
+                    <a href="#" class="action-btn header__action-item">
+                        <i
+                            class="icon-cart action-btn__icon"
+                            aria-hidden="true"
+                        ></i>
+                        <span class="action-btn__text">My Bag</span>
+                    </a>
+
+                    <a href="#" class="action-btn header__action-item">
+                        <i
+                            class="icon-profile action-btn__icon"
+                            aria-hidden="true"
+                        ></i>
+                        <span class="action-btn__text">My Profile</span>
+                    </a>
+                </div>
+            </div>
+        </header>
         <script type="module" src="./src/script/index.js"></script>
     </body>
 </html>
