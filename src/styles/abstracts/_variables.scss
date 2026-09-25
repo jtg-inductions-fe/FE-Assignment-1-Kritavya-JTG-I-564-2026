@@ -19,11 +19,23 @@ $color-primary: #000000;
 $color-secondary: #eb9b00;
 $color-light: #ffffff;
 $color-bg-light: #ebecee;
+$color-blue-dark: #002f52;
+$color-blue-light: #326589;
+$color-border: #d9d9d9;
+$color-footer: #f9f9f9;
+$color-footer-heading: #858585;
+$color-footer-text: #474646;
+$color-carousel-dot: #c4c4c4;
 
-// Gradient colors
-$gradient-start: #002f52;
-$gradient-end: #326589;
-$gradient-primary: linear-gradient(to right, $gradient-start, $gradient-end);
+// Line color
+$line-color: #858585;
+
+// Gradient color
+$gradient-primary: linear-gradient(
+    97.54deg,
+    $color-blue-dark 35.49%,
+    $color-blue-light 165.37%
+);
 
 // Font Sizes (Input as px, compiled to rem)
 $size-xs: fun.to-rem(12px);
