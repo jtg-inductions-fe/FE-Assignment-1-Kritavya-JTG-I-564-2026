@@ -87,10 +87,11 @@
         margin: 0;
         font-family: abs.$font-brand;
         font-size: 30px;
+        font-weight: abs.$weight-regular;
         line-height: 1;
-    }
-    &__title-emphasis {
-        font-weight: abs.$weight-bold;
+        &--emphasis {
+            font-weight: abs.$weight-bold;
+        }
     }
 }
 .category-dropdown {
@@ -145,7 +146,7 @@
             display: none;
         }
         &__brand {
-            margin-right: 80px;
+            margin-right: 52px;
         }
         &__nav {
             position: static;
@@ -214,6 +215,11 @@
     }
 }
 @include abs.desktop {
+    .header {
+        &__right {
+            gap: 124px;
+        }
+    }
     .action-btn {
         gap: 8px;
         &__text {
