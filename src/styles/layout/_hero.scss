@@ -1,0 +1,104 @@
+@use '../abstracts' as abs;
+
+.hero {
+    min-height: abs.to-rem(215px);
+    padding: abs.to-rem(32px) abs.to-rem(24px);
+    background: abs.$gradient-primary;
+    color: abs.$color-text-inverse;
+    text-align: center;
+
+    &__content {
+        @include abs.flex($justify: center, $direction: column);
+
+        @include abs.respond-to('tablet') {
+            margin-top: abs.to-rem(48px);
+        }
+    }
+
+    &__title {
+        margin-bottom: abs.to-rem(8px);
+        font-size: abs.to-rem(18px);
+        font-weight: abs.$weight-bold;
+
+        @include abs.respond-to('tablet') {
+            font-size: abs.to-rem(36px);
+        }
+    }
+
+    &__description {
+        max-width: abs.to-rem(316px);
+        margin-bottom: abs.to-rem(24px);
+        font-size: abs.$size-base;
+        font-weight: abs.$weight-medium;
+
+        @include abs.respond-to('tablet') {
+            max-width: abs.to-rem(479px);
+        }
+    }
+
+    &__search {
+        @include abs.flex;
+        width: 100%;
+        max-width: abs.to-rem(380px);
+        height: abs.to-rem(44px);
+        margin: 0 auto;
+        padding: 0 abs.to-rem(24px);
+        border: 1px solid abs.$color-text-inverse;
+        border-radius: abs.to-rem(24px);
+        background: transparent;
+
+        @include abs.respond-to('tablet') {
+            max-width: abs.to-rem(476px);
+            height: abs.to-rem(56px);
+        }
+
+        @include abs.respond-to('desktop') {
+            max-width: abs.to-rem(586px);
+        }
+    }
+
+    &__search-wrapper {
+        @include abs.flex;
+        gap: abs.to-rem(16px);
+        width: 100%;
+    }
+
+    &__search-icon {
+        flex-shrink: 0;
+        font-size: abs.$size-base;
+
+        @include abs.respond-to('tablet') {
+            font-size: abs.$size-md;
+        }
+    }
+
+    &__search-text {
+        width: abs.to-rem(200px);
+        min-width: 0;
+        padding: 0;
+        border: none;
+        outline: none;
+        background: transparent;
+        color: inherit;
+        font-family: abs.$font-main;
+        font-size: abs.$size-sm;
+
+        @include abs.respond-to('tablet') {
+            width: abs.to-rem(228px);
+            font-size: abs.$size-base;
+        }
+
+        &::placeholder {
+            color: inherit;
+            font-weight: abs.$weight-regular;
+        }
+
+        &::-webkit-search-cancel-button {
+            -webkit-appearance: none;
+        }
+    }
+
+    @include abs.respond-to('tablet') {
+        min-height: abs.to-rem(325px);
+    }
+}
