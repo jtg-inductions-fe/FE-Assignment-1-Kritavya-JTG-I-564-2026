@@ -1,0 +1,101 @@
+@use '../abstracts' as abs;
+
+.hero {
+    min-height: 215px;
+    padding: 32px 24px;
+    background: abs.$gradient-primary;
+    color: abs.$color-light;
+    text-align: center;
+
+    &__content {
+        @include abs.flex-mixin;
+        flex-direction: column;
+
+        @include abs.tablet {
+            margin-top: 16px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 8px;
+        font-size: 18px;
+        font-weight: abs.$weight-bold;
+
+        @include abs.tablet {
+            font-size: 36px;
+        }
+    }
+
+    &__description {
+        max-width: 316px;
+        margin-bottom: 24px;
+        font-size: 16px;
+        font-weight: abs.$weight-medium;
+
+        @include abs.tablet {
+            max-width: 479px;
+        }
+    }
+
+    &__search {
+        @include abs.flex-mixin;
+        width: 100%;
+        max-width: 380px;
+        height: 44px;
+        margin: 0 auto;
+        padding: 0 24px;
+        border: 1px solid abs.$color-light;
+        border-radius: 24px;
+        background: transparent;
+
+        @include abs.tablet {
+            max-width: 476px;
+            height: 56px;
+        }
+
+        @include abs.desktop {
+            max-width: 586px;
+        }
+    }
+
+    &__search-wrapper {
+        @include abs.flex-mixin;
+        gap: 16px;
+        width: 100%;
+    }
+
+    &__search-icon {
+        flex-shrink: 0;
+        font-size: 16px;
+
+        @include abs.tablet {
+            font-size: 18px;
+        }
+    }
+
+    &__search-text {
+        width: 200px;
+        min-width: 0;
+        padding: 0;
+        border: none;
+        outline: none;
+        background: transparent;
+        color: inherit;
+        font-family: abs.$font-main;
+        font-size: 14px;
+
+        @include abs.tablet {
+            width: 228px;
+            font-size: 16px;
+        }
+
+        &::placeholder {
+            color: inherit;
+            font-weight: abs.$weight-regular;
+        }
+
+        &::-webkit-search-cancel-button {
+            -webkit-appearance: none;
+        }
+    }
+}
