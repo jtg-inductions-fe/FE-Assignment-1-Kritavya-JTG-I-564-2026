@@ -1,0 +1,47 @@
+@use './functions' as fun;
+
+// Breakpoints
+$breakpoint-tablet: 1024px;
+$breakpoint-desktop: 1728px;
+
+// Font Families
+$font-main: 'Poppins', sans-serif;
+$font-brand: 'Josefin Sans', sans-serif;
+
+// Font Weights
+$weight-light: 300;
+$weight-regular: 400;
+$weight-medium: 500;
+$weight-bold: 700;
+
+// Solid Colors
+$color-primary: #000000;
+$color-secondary: #eb9b00;
+$color-light: #ffffff;
+$color-bg-light: #ebecee;
+$color-blue-dark: #002f52;
+$color-blue-light: #326589;
+$color-border: #d9d9d9;
+$color-footer: #f9f9f9;
+$color-footer-heading: #858585;
+$color-footer-text: #474646;
+$color-carousel-dot: #c4c4c4;
+
+// Line color
+$line-color: #858585;
+
+// Gradient color
+$gradient-primary: linear-gradient(
+    97.54deg,
+    $color-blue-dark 35.49%,
+    $color-blue-light 165.37%
+);
+
+// Font Sizes (Input as px, compiled to rem)
+$size-xs: fun.to-rem(12px);
+$size-sm: fun.to-rem(14px);
+$size-base: fun.to-rem(16px);
+$size-md: fun.to-rem(20px);
+$size-lg: fun.to-rem(24px);
+$size-xl: fun.to-rem(32px);
+$size-xxl: fun.to-rem(48px);
