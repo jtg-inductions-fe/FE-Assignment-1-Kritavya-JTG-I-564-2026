@@ -1,0 +1,23 @@
+@use '../abstracts' as abs;
+
+.action-btn {
+    @include abs.flex-mixin;
+    color: abs.$color-blue-dark;
+
+    &__icon {
+        font-size: 32px;
+    }
+
+    &__text {
+        display: none;
+
+        @include abs.desktop {
+            display: inline;
+            font-size: abs.$size-md;
+        }
+    }
+
+    @include abs.desktop {
+        gap: 8px;
+    }
+}
