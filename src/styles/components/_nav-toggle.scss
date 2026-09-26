@@ -1,0 +1,23 @@
+@use '../abstracts' as abs;
+
+.nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border: 0;
+    background-color: transparent;
+
+    &.is-open {
+        background: abs.$gradient-primary;
+
+        .nav-toggle__icon::before {
+            color: abs.$color-light;
+        }
+    }
+
+    &__icon {
+        font-size: 36px;
+    }
+}
