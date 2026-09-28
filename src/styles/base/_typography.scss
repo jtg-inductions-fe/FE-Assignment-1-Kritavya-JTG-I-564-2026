@@ -8,6 +8,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 @font-face {
     font-family: 'Poppins';
     src: url('/assets/fonts/poppins-regular.woff2') format('woff2');
@@ -15,6 +16,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 @font-face {
     font-family: 'Poppins';
     src: url('/assets/fonts/poppins-500.woff2') format('woff2');
@@ -38,6 +40,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 @font-face {
     font-family: 'Josefin Sans';
     src: url('/assets/fonts/josefin-sans-700.woff2') format('woff2');
@@ -50,4 +53,6 @@
 body {
     font-family: abs.$font-main;
     font-weight: abs.$weight-regular;
+    color: abs.$color-text-primary;
+    background: abs.$color-background-page;
 }

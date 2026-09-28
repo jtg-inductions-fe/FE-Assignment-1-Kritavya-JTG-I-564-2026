@@ -1,8 +1,10 @@
 @use './functions' as fun;
 
 // Breakpoints
-$breakpoint-tablet: 1024px;
-$breakpoint-desktop: 1728px;
+$breakpoints: (
+    'tablet': 1024px,
+    'desktop': 1728px,
+);
 
 // Font Families
 $font-main: 'Poppins', sans-serif;
@@ -14,27 +16,33 @@ $weight-regular: 400;
 $weight-medium: 500;
 $weight-bold: 700;
 
-// Solid Colors
-$color-primary: #000000;
-$color-secondary: #eb9b00;
-$color-light: #ffffff;
-$color-bg-light: #ebecee;
-$color-blue-dark: #002f52;
-$color-blue-light: #326589;
-$color-border: #d9d9d9;
-$color-footer: #f9f9f9;
+// Text Colors
+$color-text-primary: #000000;
+$color-text-secondary: #eb9b00;
+$color-text-inverse: #ffffff;
+
+// Background Colors
+$color-background-page: #ffffff;
+$color-background-section: #ebecee;
+$color-background-footer: #f9f9f9;
+
+// Footer Colors
 $color-footer-heading: #858585;
 $color-footer-text: #474646;
-$color-carousel-dot: #c4c4c4;
 
-// Line color
-$line-color: #858585;
+// Gradient Colors
+$color-gradient-start: #002f52;
+$color-gradient-end: #326589;
+
+// Other Colors
+$color-border: #d9d9d9;
+$color-carousel-dot: #c4c4c4;
 
 // Gradient color
 $gradient-primary: linear-gradient(
     97.54deg,
-    $color-blue-dark 35.49%,
-    $color-blue-light 165.37%
+    $color-gradient-start 35.49%,
+    $color-gradient-end 165.37%
 );
 
 // Font Sizes (Input as px, compiled to rem)

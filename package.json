@@ -9,9 +9,9 @@
         "dev": "vite",
         "build": "vite build",
         "preview": "vite preview",
-        "lint": "npx eslint .",
-        "prettier": "npx prettier --write ./src ./index.html",
-        "lint:fix": "yarn eslint . --fix",
+        "lint": "eslint .",
+        "prettier": "prettier --write ./src ./index.html",
+        "lint:fix": "eslint . --fix",
         "prepare": "husky",
         "pre-commit": "lint-staged"
     },

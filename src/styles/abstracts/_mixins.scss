@@ -1,19 +1,18 @@
 @use './variables' as var;
 
-@mixin flex-mixin($justify: center) {
+@mixin flex($justify: center, $align: center, $direction: row) {
     display: flex;
-    align-items: center;
+    align-items: $align;
     justify-content: $justify;
+    flex-direction: $direction;
 }
 
-@mixin tablet {
-    @media (min-width: #{var.$breakpoint-tablet}) {
-        @content;
-    }
-}
-
-@mixin desktop {
-    @media (min-width: #{var.$breakpoint-desktop}) {
-        @content;
+@mixin respond-to($breakpoint) {
+    @if map-has-key(var.$breakpoints, $breakpoint) {
+        @media (min-width: map-get(var.$breakpoints, $breakpoint)) {
+            @content;
+        }
+    } @else {
+        @error "Breakpoint '#{$breakpoint}' is not defined.";
     }
 }
