@@ -1,23 +1,24 @@
 @use '../abstracts' as abs;
 
 .action-btn {
-    @include abs.flex-mixin;
-    color: abs.$color-blue-dark;
+    @include abs.flex;
+
+    color: abs.$color-gradient-start;
 
     &__icon {
-        font-size: 32px;
+        font-size: abs.$size-xl;
     }
 
     &__text {
         display: none;
 
-        @include abs.desktop {
+        @include abs.respond-to('desktop') {
             display: inline;
             font-size: abs.$size-md;
         }
     }
 
-    @include abs.desktop {
-        gap: 8px;
+    @include abs.respond-to('desktop') {
+        gap: abs.to-rem(8px);
     }
 }

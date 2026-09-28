@@ -16,15 +16,16 @@
         <link rel="stylesheet" href="src/styles/main.scss" />
     </head>
     <body>
-        <header class="header">
+        <header class="header" data-js="header">
             <div class="header__container container">
                 <div class="header__left">
                     <button
-                        class="nav-toggle header__toggle"
+                        class="nav-toggle"
                         type="button"
                         aria-label="Open menu"
                         aria-expanded="false"
                         aria-controls="main-navigation"
+                        data-js="nav-toggle"
                     >
                         <i
                             class="icon-menu nav-toggle__icon"
@@ -51,16 +52,18 @@
                     id="main-navigation"
                     class="header__nav"
                     aria-label="Main navigation"
+                    data-js="main-navigation"
                 >
-                    <div class="category-dropdown">
-                        <a
-                            href="#"
+                    <div class="category-dropdown" data-js="category-dropdown">
+                        <button
                             class="category-dropdown__trigger"
+                            type="button"
                             aria-haspopup="true"
                             aria-expanded="false"
+                            data-js="category-trigger"
                         >
                             Categories
-                        </a>
+                        </button>
 
                         <div class="category-dropdown__menu">
                             <ul class="category-dropdown__list">
@@ -69,21 +72,25 @@
                                         PROGRAMMING
                                     </a>
                                 </li>
+
                                 <li class="category-dropdown__item">
                                     <a href="#" class="category-dropdown__link">
                                         FRONT-END
                                     </a>
                                 </li>
+
                                 <li class="category-dropdown__item">
                                     <a href="#" class="category-dropdown__link">
                                         INFRASTRUCTURE
                                     </a>
                                 </li>
+
                                 <li class="category-dropdown__item">
                                     <a href="#" class="category-dropdown__link">
                                         BUSINESS
                                     </a>
                                 </li>
+
                                 <li class="category-dropdown__item">
                                     <a href="#" class="category-dropdown__link">
                                         DESIGN &amp; UX
@@ -93,15 +100,14 @@
                         </div>
                     </div>
 
-                    <a href="#" class="header__nav-link"> Favorites </a>
-
-                    <a href="#" class="header__nav-link"> My Bookshelf </a>
+                    <a href="#" class="header__nav-link">Favorites</a>
+                    <a href="#" class="header__nav-link">My Bookshelf</a>
                 </nav>
 
                 <div class="header__right">
                     <a
                         href="#"
-                        class="action-btn header__action-item header__action-item--favorites"
+                        class="action-btn header__action-item--favorites"
                         aria-label="My Favorites"
                     >
                         <i
@@ -110,7 +116,7 @@
                         ></i>
                     </a>
 
-                    <a href="#" class="action-btn header__action-item">
+                    <a href="#" class="action-btn">
                         <i
                             class="icon-cart action-btn__icon"
                             aria-hidden="true"
@@ -118,7 +124,7 @@
                         <span class="action-btn__text">My Bag</span>
                     </a>
 
-                    <a href="#" class="action-btn header__action-item">
+                    <a href="#" class="action-btn">
                         <i
                             class="icon-profile action-btn__icon"
                             aria-hidden="true"
@@ -128,6 +134,7 @@
                 </div>
             </div>
         </header>
+
         <script type="module" src="./src/script/index.js"></script>
     </body>
 </html>
