@@ -1,0 +1,26 @@
+@use '../abstracts' as *;
+
+.nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: to-rem(80px);
+    height: to-rem(80px);
+    background-color: transparent;
+
+    &.is-open {
+        background: $gradient-primary;
+
+        .nav-toggle__icon::before {
+            color: $color-text-inverse;
+        }
+    }
+
+    &__icon {
+        font-size: to-rem(36px);
+    }
+
+    @include respond-to('tablet') {
+        display: none;
+    }
+}

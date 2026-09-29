@@ -1,0 +1,93 @@
+@use '../abstracts' as *;
+
+.header {
+    height: to-rem(80px);
+
+    &__container {
+        height: to-rem(80px);
+        @include flex($justify: flex-start);
+    }
+
+    &__left {
+        height: to-rem(80px);
+        @include flex($justify: flex-start);
+        gap: to-rem(12px);
+    }
+
+    &__brand {
+        @include respond-to('tablet') {
+            margin-right: to-rem(52px);
+        }
+    }
+
+    &__nav {
+        position: absolute;
+        top: to-rem(80px);
+        left: 0;
+        width: to-rem(300px);
+        box-shadow: 0 to-rem(8px) to-rem(24px) rgba(0, 0, 0, 0.15);
+        visibility: hidden;
+        opacity: 0;
+        z-index: 100;
+
+        &.is-open {
+            visibility: visible;
+            opacity: 1;
+            background-color: $color-background-page;
+        }
+
+        @include respond-to('tablet') {
+            position: static;
+            width: auto;
+            height: to-rem(80px);
+            @include flex($justify: flex-start);
+            gap: to-rem(16px);
+            background-color: transparent;
+            box-shadow: none;
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    &__nav-link {
+        display: none;
+        padding: to-rem(12px) to-rem(16px);
+        color: $color-gradient-start;
+        font-size: $size-base;
+        text-transform: uppercase;
+
+        &:hover,
+        &:focus-visible,
+        &--active {
+            color: $color-text-inverse;
+            background: $gradient-primary;
+        }
+
+        @include respond-to('tablet') {
+            display: block;
+        }
+    }
+
+    &__right {
+        height: to-rem(80px);
+        @include flex($justify: flex-end);
+        gap: to-rem(28px);
+        margin-left: auto;
+        padding-right: to-rem(36px);
+
+        @include respond-to('tablet') {
+            padding: 0;
+            gap: to-rem(64px);
+        }
+
+        @include respond-to('desktop') {
+            gap: to-rem(124px);
+        }
+    }
+
+    &__action-item--favorites {
+        @include respond-to('tablet') {
+            display: none;
+        }
+    }
+}

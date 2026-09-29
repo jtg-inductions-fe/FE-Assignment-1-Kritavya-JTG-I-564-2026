@@ -1,0 +1,94 @@
+@use '../abstracts' as *;
+
+.category-dropdown {
+    width: 100%;
+
+    &__trigger {
+        display: block;
+        width: 100%;
+        padding: to-rem(16px);
+        color: $color-gradient-start;
+        font-family: inherit;
+        font-size: $size-base;
+        text-align: left;
+
+        &:hover,
+        &:focus-visible {
+            color: $color-text-secondary;
+            font-weight: $weight-bold;
+        }
+
+        @include respond-to('tablet') {
+            width: auto;
+            padding: to-rem(12px) to-rem(16px);
+            text-transform: uppercase;
+
+            &:hover,
+            &:focus-visible,
+            &[aria-expanded='true'] {
+                color: $color-text-inverse;
+                background: $gradient-primary;
+                font-weight: $weight-regular;
+            }
+        }
+    }
+
+    &__menu {
+        display: block;
+
+        @include respond-to('tablet') {
+            position: absolute;
+            top: to-rem(48px);
+            left: 0;
+            display: none;
+            width: to-rem(240px);
+            background-color: $color-background-page;
+            box-shadow: 0 to-rem(8px) to-rem(24px) rgba(0, 0, 0, 0.15);
+            z-index: 200;
+        }
+    }
+
+    &__list {
+        @include flex($align: left, $direction: column);
+
+        margin: 0;
+        padding: 0;
+    }
+
+    &__link {
+        display: block;
+        padding: to-rem(12px) to-rem(16px);
+        color: $color-gradient-start;
+        font-size: $size-base;
+
+        &:hover,
+        &:focus-visible,
+        &.is-active {
+            color: $color-text-secondary;
+            font-weight: $weight-bold;
+        }
+
+        @include respond-to('tablet') {
+            &:hover,
+            &:focus-visible,
+            &.is-active {
+                color: $color-text-inverse;
+                background: $gradient-primary;
+                font-weight: $weight-regular;
+            }
+        }
+    }
+
+    @include respond-to('tablet') {
+        position: relative;
+        width: auto;
+    }
+
+    &.is-open {
+        .category-dropdown__menu {
+            @include respond-to('tablet') {
+                display: block;
+            }
+        }
+    }
+}
