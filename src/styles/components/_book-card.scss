@@ -42,6 +42,13 @@
         }
     }
 
+    &__stars {
+        display: flex;
+        gap: to-rem(4px);
+        margin-bottom: to-rem(8px);
+        font-size: $size-base;
+    }
+
     &__title {
         margin: 0 0 to-rem(8px);
         color: $color-gradient-start;
