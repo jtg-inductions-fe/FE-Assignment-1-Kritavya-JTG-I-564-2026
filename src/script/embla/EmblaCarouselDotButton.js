@@ -11,7 +11,7 @@ export const addDotButtonAndClickHandlers = (emblaApi, dotsNode) => {
             .scrollSnapList()
             .map(
                 (_, index) =>
-                    `<button class="latest-releases__dot" type="button" aria-label="Go to slide ${index + 1}" aria-selected="false"></button>`,
+                    `<button class="carousel__dot" type="button" aria-label="Go to slide ${index + 1}" aria-selected="false"></button>`,
             )
             .join('');
 
@@ -19,9 +19,7 @@ export const addDotButtonAndClickHandlers = (emblaApi, dotsNode) => {
             emblaApi.scrollTo(index);
         };
 
-        dotNodes = Array.from(
-            dotsNode.querySelectorAll('.latest-releases__dot'),
-        );
+        dotNodes = Array.from(dotsNode.querySelectorAll('.carousel__dot'));
 
         dotNodes.forEach((dotNode, index) => {
             dotNode.addEventListener('click', () => scrollTo(index));
@@ -29,14 +27,15 @@ export const addDotButtonAndClickHandlers = (emblaApi, dotsNode) => {
     };
 
     const toggleDotButtonsActive = () => {
-        const previous = emblaApi.previousScrollSnap();
         const selected = emblaApi.selectedScrollSnap();
 
-        dotNodes[previous].classList.remove('latest-releases__dot--selected');
-        dotNodes[previous].setAttribute('aria-selected', 'false');
+        dotNodes.forEach((dotNode, index) => {
+            const isSelected = index === selected;
 
-        dotNodes[selected].classList.add('latest-releases__dot--selected');
-        dotNodes[selected].setAttribute('aria-selected', 'true');
+            dotNode.classList.toggle('carousel__dot--selected', isSelected);
+
+            dotNode.setAttribute('aria-selected', String(isSelected));
+        });
     };
 
     addDotBtnsWithClickHandlers();

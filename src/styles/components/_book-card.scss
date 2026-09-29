@@ -9,13 +9,12 @@
     max-width: to-rem(588px);
 
     &__content {
-        @include flex($justify: space-between);
+        @include flex($align: stretch, $justify: space-between);
 
         min-height: to-rem(188px);
 
         @include respond-to('tablet') {
             min-height: to-rem(165px);
-            align-items: stretch;
         }
     }
 
@@ -101,7 +100,7 @@
         padding: to-rem(8px);
         border: 0;
         cursor: pointer;
-        font-size: $size-xl;
+        font-size: to-rem(28px);
 
         @include respond-to('tablet') {
             padding: 0;
@@ -134,6 +133,6 @@
 
     @include respond-to('desktop') {
         margin-top: to-rem(50px);
-        padding: to-rem(16px) to-rem(24px);
+        padding: to-rem(16px) to-rem(18px) to-rem(16px) to-rem(20px);
     }
 }
