@@ -1,96 +1,96 @@
-@use '../abstracts' as abs;
+@use '../abstracts' as *;
 
 .hero {
-    min-height: abs.to-rem(215px);
-    padding: abs.to-rem(32px) abs.to-rem(24px);
-    background: abs.$gradient-primary;
-    color: abs.$color-text-inverse;
+    min-height: to-rem(215px);
+    padding: to-rem(32px) to-rem(24px);
+    background: $gradient-primary;
+    color: $color-text-inverse;
     text-align: center;
 
     &__content {
-        @include abs.flex($justify: center, $direction: column);
+        @include flex($justify: center, $direction: column);
 
-        @include abs.respond-to('tablet') {
-            margin-top: abs.to-rem(48px);
+        @include respond-to('tablet') {
+            margin-top: to-rem(48px);
         }
     }
 
     &__title {
-        margin-bottom: abs.to-rem(8px);
-        font-size: abs.to-rem(18px);
-        font-weight: abs.$weight-bold;
+        margin-bottom: to-rem(8px);
+        font-size: to-rem(18px);
+        font-weight: $weight-bold;
 
-        @include abs.respond-to('tablet') {
-            font-size: abs.to-rem(36px);
+        @include respond-to('tablet') {
+            font-size: to-rem(36px);
         }
     }
 
     &__description {
-        max-width: abs.to-rem(316px);
-        margin-bottom: abs.to-rem(24px);
-        font-size: abs.$size-base;
-        font-weight: abs.$weight-medium;
+        max-width: to-rem(316px);
+        margin-bottom: to-rem(24px);
+        font-size: $size-base;
+        font-weight: $weight-medium;
 
-        @include abs.respond-to('tablet') {
-            max-width: abs.to-rem(479px);
+        @include respond-to('tablet') {
+            max-width: to-rem(479px);
         }
     }
 
     &__search {
-        @include abs.flex;
+        @include flex;
         width: 100%;
-        max-width: abs.to-rem(380px);
-        height: abs.to-rem(44px);
+        max-width: to-rem(380px);
+        height: to-rem(44px);
         margin: 0 auto;
-        padding: 0 abs.to-rem(24px);
-        border: 1px solid abs.$color-text-inverse;
-        border-radius: abs.to-rem(24px);
+        padding: 0 to-rem(24px);
+        border: 1px solid $color-text-inverse;
+        border-radius: to-rem(24px);
         background: transparent;
 
-        @include abs.respond-to('tablet') {
-            max-width: abs.to-rem(476px);
-            height: abs.to-rem(56px);
+        @include respond-to('tablet') {
+            max-width: to-rem(476px);
+            height: to-rem(56px);
         }
 
-        @include abs.respond-to('desktop') {
-            max-width: abs.to-rem(586px);
+        @include respond-to('desktop') {
+            max-width: to-rem(586px);
         }
     }
 
     &__search-wrapper {
-        @include abs.flex;
-        gap: abs.to-rem(16px);
+        @include flex;
+        gap: to-rem(16px);
         width: 100%;
     }
 
     &__search-icon {
         flex-shrink: 0;
-        font-size: abs.$size-base;
+        font-size: $size-base;
 
-        @include abs.respond-to('tablet') {
-            font-size: abs.$size-md;
+        @include respond-to('tablet') {
+            font-size: $size-md;
         }
     }
 
     &__search-text {
-        width: abs.to-rem(200px);
+        width: to-rem(200px);
         min-width: 0;
         padding: 0;
         border: none;
         outline: none;
         background: transparent;
         color: inherit;
-        font-family: abs.$font-main;
-        font-size: abs.$size-sm;
+        font-family: $font-main;
+        font-size: $size-sm;
 
-        @include abs.respond-to('tablet') {
-            width: abs.to-rem(228px);
-            font-size: abs.$size-base;
+        @include respond-to('tablet') {
+            width: to-rem(228px);
+            font-size: $size-base;
         }
 
         &::placeholder {
             color: inherit;
-            font-weight: abs.$weight-regular;
+            font-weight: $weight-regular;
         }
 
         &::-webkit-search-cancel-button {
@@ -98,7 +98,7 @@
         }
     }
 
-    @include abs.respond-to('tablet') {
-        min-height: abs.to-rem(325px);
+    @include respond-to('tablet') {
+        min-height: to-rem(325px);
     }
 }
