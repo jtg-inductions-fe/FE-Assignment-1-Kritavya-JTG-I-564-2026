@@ -1,0 +1,104 @@
+@use '../abstracts' as *;
+
+.hero {
+    min-height: to-rem(215px);
+    padding: to-rem(32px) to-rem(24px);
+    background: $gradient-primary;
+    color: $color-text-inverse;
+    text-align: center;
+
+    &__content {
+        @include flex($justify: center, $direction: column);
+
+        @include respond-to('tablet') {
+            margin-top: to-rem(48px);
+        }
+    }
+
+    &__title {
+        margin-bottom: to-rem(8px);
+        font-size: to-rem(18px);
+        font-weight: $weight-bold;
+
+        @include respond-to('tablet') {
+            font-size: to-rem(36px);
+        }
+    }
+
+    &__description {
+        max-width: to-rem(316px);
+        margin-bottom: to-rem(24px);
+        font-size: $size-base;
+        font-weight: $weight-medium;
+
+        @include respond-to('tablet') {
+            max-width: to-rem(479px);
+        }
+    }
+
+    &__search {
+        @include flex;
+        width: 100%;
+        max-width: to-rem(380px);
+        height: to-rem(44px);
+        margin: 0 auto;
+        padding: 0 to-rem(24px);
+        border: 1px solid $color-text-inverse;
+        border-radius: to-rem(24px);
+        background: transparent;
+
+        @include respond-to('tablet') {
+            max-width: to-rem(476px);
+            height: to-rem(56px);
+        }
+
+        @include respond-to('desktop') {
+            max-width: to-rem(586px);
+        }
+    }
+
+    &__search-wrapper {
+        @include flex;
+        gap: to-rem(16px);
+        width: 100%;
+    }
+
+    &__search-icon {
+        flex-shrink: 0;
+        font-size: $size-base;
+
+        @include respond-to('tablet') {
+            font-size: $size-md;
+        }
+    }
+
+    &__search-text {
+        width: to-rem(200px);
+        min-width: 0;
+        padding: 0;
+        border: none;
+        outline: none;
+        background: transparent;
+        color: inherit;
+        font-family: $font-main;
+        font-size: $size-sm;
+
+        @include respond-to('tablet') {
+            width: to-rem(228px);
+            font-size: $size-base;
+        }
+
+        &::placeholder {
+            color: inherit;
+            font-weight: $weight-regular;
+        }
+
+        &::-webkit-search-cancel-button {
+            -webkit-appearance: none;
+        }
+    }
+
+    @include respond-to('tablet') {
+        min-height: to-rem(325px);
+    }
+}
