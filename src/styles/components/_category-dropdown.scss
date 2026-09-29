@@ -1,4 +1,4 @@
-@use '../abstracts' as abs;
+@use '../abstracts' as *;
 
 .category-dropdown {
     width: 100%;
@@ -6,29 +6,29 @@
     &__trigger {
         display: block;
         width: 100%;
-        padding: abs.to-rem(16px);
-        color: abs.$color-gradient-start;
+        padding: to-rem(16px);
+        color: $color-gradient-start;
         font-family: inherit;
-        font-size: abs.$size-base;
+        font-size: $size-base;
         text-align: left;
 
         &:hover,
         &:focus-visible {
-            color: abs.$color-text-secondary;
-            font-weight: abs.$weight-bold;
+            color: $color-text-secondary;
+            font-weight: $weight-bold;
         }
 
-        @include abs.respond-to('tablet') {
+        @include respond-to('tablet') {
             width: auto;
-            padding: abs.to-rem(12px) abs.to-rem(16px);
+            padding: to-rem(12px) to-rem(16px);
             text-transform: uppercase;
 
             &:hover,
             &:focus-visible,
             &[aria-expanded='true'] {
-                color: abs.$color-text-inverse;
-                background: abs.$gradient-primary;
-                font-weight: abs.$weight-regular;
+                color: $color-text-inverse;
+                background: $gradient-primary;
+                font-weight: $weight-regular;
             }
         }
     }
@@ -36,20 +36,20 @@
     &__menu {
         display: block;
 
-        @include abs.respond-to('tablet') {
+        @include respond-to('tablet') {
             position: absolute;
-            top: abs.to-rem(48px);
+            top: to-rem(48px);
             left: 0;
             display: none;
-            width: abs.to-rem(240px);
-            background-color: abs.$color-background-page;
-            box-shadow: 0 abs.to-rem(8px) abs.to-rem(24px) rgba(0, 0, 0, 0.15);
+            width: to-rem(240px);
+            background-color: $color-background-page;
+            box-shadow: 0 to-rem(8px) to-rem(24px) rgba(0, 0, 0, 0.15);
             z-index: 200;
         }
     }
 
     &__list {
-        @include abs.flex($align: left, $direction: column);
+        @include flex($align: left, $direction: column);
 
         margin: 0;
         padding: 0;
@@ -57,36 +57,36 @@
 
     &__link {
         display: block;
-        padding: abs.to-rem(12px) abs.to-rem(16px);
-        color: abs.$color-gradient-start;
-        font-size: abs.$size-base;
+        padding: to-rem(12px) to-rem(16px);
+        color: $color-gradient-start;
+        font-size: $size-base;
 
         &:hover,
         &:focus-visible,
         &.is-active {
-            color: abs.$color-text-secondary;
-            font-weight: abs.$weight-bold;
+            color: $color-text-secondary;
+            font-weight: $weight-bold;
         }
 
-        @include abs.respond-to('tablet') {
+        @include respond-to('tablet') {
             &:hover,
             &:focus-visible,
             &.is-active {
-                color: abs.$color-text-inverse;
-                background: abs.$gradient-primary;
-                font-weight: abs.$weight-regular;
+                color: $color-text-inverse;
+                background: $gradient-primary;
+                font-weight: $weight-regular;
             }
         }
     }
 
-    @include abs.respond-to('tablet') {
+    @include respond-to('tablet') {
         position: relative;
         width: auto;
     }
 
     &.is-open {
         .category-dropdown__menu {
-            @include abs.respond-to('tablet') {
+            @include respond-to('tablet') {
                 display: block;
             }
         }

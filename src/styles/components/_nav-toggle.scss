@@ -1,26 +1,26 @@
-@use '../abstracts' as abs;
+@use '../abstracts' as *;
 
 .nav-toggle {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: abs.to-rem(80px);
-    height: abs.to-rem(80px);
+    width: to-rem(80px);
+    height: to-rem(80px);
     background-color: transparent;
 
     &.is-open {
-        background: abs.$gradient-primary;
+        background: $gradient-primary;
 
         .nav-toggle__icon::before {
-            color: abs.$color-text-inverse;
+            color: $color-text-inverse;
         }
     }
 
     &__icon {
-        font-size: abs.to-rem(36px);
+        font-size: to-rem(36px);
     }
 
-    @include abs.respond-to('tablet') {
+    @include respond-to('tablet') {
         display: none;
     }
 }

@@ -1,24 +1,24 @@
-@use '../abstracts' as abs;
+@use '../abstracts' as *;
 
 .action-btn {
-    @include abs.flex;
+    @include flex;
 
-    color: abs.$color-gradient-start;
+    color: $color-gradient-start;
 
     &__icon {
-        font-size: abs.$size-xl;
+        font-size: $size-xl;
     }
 
     &__text {
         display: none;
 
-        @include abs.respond-to('desktop') {
+        @include respond-to('desktop') {
             display: inline;
-            font-size: abs.$size-md;
+            font-size: $size-md;
         }
     }
 
-    @include abs.respond-to('desktop') {
-        gap: abs.to-rem(8px);
+    @include respond-to('desktop') {
+        gap: to-rem(8px);
     }
 }
