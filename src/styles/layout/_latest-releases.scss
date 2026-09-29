@@ -21,7 +21,7 @@
     }
 
     &__content {
-        @include flex($direction: column);
+        @include flex($justify: space-between, $direction: column);
 
         width: 100%;
         padding: to-rem(14px) 0 to-rem(24px);
@@ -33,9 +33,7 @@
 
         @include respond-to('desktop') {
             flex-direction: row;
-            gap: to-rem(90px);
-            padding: to-rem(80px) to-rem(80px);
-            padding-bottom: to-rem(100px);
+            padding: to-rem(70px) to-rem(180px) to-rem(105px);
         }
     }
 
@@ -48,7 +46,7 @@
         }
 
         @include respond-to('desktop') {
-            max-width: to-rem(700px);
+            max-width: to-rem(740px);
         }
     }
 
@@ -119,7 +117,12 @@
         box-shadow: to-rem(2px) to-rem(4px) to-rem(8px) rgba(0, 0, 0, 0.15);
 
         @include respond-to('tablet') {
-            width: 190px;
+            width: to-rem(190px);
+        }
+
+        @include respond-to('desktop') {
+            width: to-rem(180px);
+            height: to-rem(254px);
         }
     }
 
@@ -131,7 +134,6 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        // padding-inline: to-rem(8px);
         pointer-events: none;
         transform: translateY(-50%);
     }

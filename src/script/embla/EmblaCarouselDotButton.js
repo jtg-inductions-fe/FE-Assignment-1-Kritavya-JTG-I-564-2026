@@ -1,3 +1,8 @@
+/**
+ * Create the carousel dot buttons and click handlers
+ * @param {Object} emblaApi - Embla carousel API
+ * @param {HTMLElement} dotsNode - Container for the dot buttons
+ */
 export const addDotButtonAndClickHandlers = (emblaApi, dotsNode) => {
     let dotNodes = [];
 
@@ -5,8 +10,8 @@ export const addDotButtonAndClickHandlers = (emblaApi, dotsNode) => {
         dotsNode.innerHTML = emblaApi
             .scrollSnapList()
             .map(
-                () =>
-                    '<button class="latest-releases__dot" type="button"></button>',
+                (_, index) =>
+                    `<button class="latest-releases__dot" type="button" aria-label="Go to slide ${index + 1}" aria-selected="false"></button>`,
             )
             .join('');
 
@@ -28,8 +33,10 @@ export const addDotButtonAndClickHandlers = (emblaApi, dotsNode) => {
         const selected = emblaApi.selectedScrollSnap();
 
         dotNodes[previous].classList.remove('latest-releases__dot--selected');
+        dotNodes[previous].setAttribute('aria-selected', 'false');
 
         dotNodes[selected].classList.add('latest-releases__dot--selected');
+        dotNodes[selected].setAttribute('aria-selected', 'true');
     };
 
     addDotBtnsWithClickHandlers();
