@@ -1,0 +1,169 @@
+@use '../abstracts' as *;
+
+.latest-releases {
+    padding-top: to-rem(20px);
+
+    &__title {
+        margin: 0 0 to-rem(8px);
+        color: $color-text-secondary;
+        font-size: to-rem(18px);
+        font-weight: $weight-bold;
+        text-align: center;
+
+        @include respond-to('tablet') {
+            margin: 0 0 to-rem(12px);
+            font-size: to-rem(26px);
+        }
+
+        @include respond-to('desktop') {
+            font-size: $size-xl;
+        }
+    }
+
+    &__content {
+        @include flex($direction: column);
+
+        width: 100%;
+        padding: to-rem(14px) 0 to-rem(24px);
+        background-color: $color-background-section;
+
+        @include respond-to('tablet') {
+            padding: to-rem(34px) 0;
+        }
+
+        @include respond-to('desktop') {
+            flex-direction: row;
+            gap: to-rem(90px);
+            padding: to-rem(80px) to-rem(80px);
+            padding-bottom: to-rem(100px);
+        }
+    }
+
+    &__carousel {
+        position: relative;
+        width: 100%;
+
+        @include respond-to('tablet') {
+            max-width: to-rem(800px);
+        }
+
+        @include respond-to('desktop') {
+            max-width: to-rem(700px);
+        }
+    }
+
+    &__dots {
+        @include flex;
+
+        gap: to-rem(8px);
+        margin-bottom: to-rem(16px);
+
+        @include respond-to('tablet') {
+            gap: to-rem(12px);
+            margin-bottom: to-rem(76px);
+        }
+
+        @include respond-to('desktop') {
+            margin-bottom: to-rem(36px);
+        }
+    }
+
+    &__dot {
+        width: to-rem(8px);
+        height: to-rem(8px);
+        padding: 0;
+        border: 0;
+        border-radius: 50%;
+        background-color: $color-carousel-dot;
+        cursor: pointer;
+
+        &--selected {
+            background: $gradient-primary;
+        }
+
+        @include respond-to('tablet') {
+            width: to-rem(12px);
+            height: to-rem(12px);
+        }
+    }
+
+    &__viewport {
+        @include flex;
+
+        width: 100%;
+        overflow: hidden;
+    }
+
+    &__container {
+        display: flex;
+    }
+
+    &__slide {
+        @include flex;
+
+        flex: 0 0 47%;
+        min-width: 0;
+        padding-inline: to-rem(8px);
+
+        @include respond-to('tablet') {
+            flex: 0 0 33.333%;
+        }
+    }
+
+    &__book {
+        display: block;
+        width: to-rem(180px);
+        height: auto;
+        aspect-ratio: 179 / 249;
+        object-fit: fill;
+        box-shadow: to-rem(2px) to-rem(4px) to-rem(8px) rgba(0, 0, 0, 0.15);
+
+        @include respond-to('tablet') {
+            width: 190px;
+        }
+    }
+
+    &__controls {
+        position: absolute;
+        top: 60%;
+        right: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // padding-inline: to-rem(8px);
+        pointer-events: none;
+        transform: translateY(-50%);
+    }
+
+    &__arrow {
+        display: none;
+
+        @include respond-to('tablet') {
+            @include flex;
+
+            width: to-rem(50px);
+            height: to-rem(50px);
+            padding: 0;
+            border: 0;
+            border-radius: 50%;
+            background-color: $color-gradient-start;
+            color: $color-text-inverse;
+            cursor: pointer;
+            pointer-events: auto;
+
+            &:disabled {
+                opacity: 0.4;
+                cursor: default;
+            }
+        }
+    }
+
+    @include respond-to('tablet') {
+        padding-top: to-rem(56px);
+    }
+
+    @include respond-to('desktop') {
+        padding-top: to-rem(46px);
+    }
+}
