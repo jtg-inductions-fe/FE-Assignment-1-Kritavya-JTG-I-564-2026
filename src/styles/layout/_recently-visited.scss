@@ -50,7 +50,6 @@
     @include respond-to('tablet') {
         margin-top: 0;
         padding: 0;
-
         min-height: to-rem(330px);
     }
 
