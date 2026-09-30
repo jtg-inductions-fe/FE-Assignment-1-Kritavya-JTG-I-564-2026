@@ -304,66 +304,62 @@
                     </article>
                 </div>
             </section>
+
             <section class="best-sellers">
-                <h2 class="best-sellers__title">BEST SELLERS</h2>
+                <h2 class="best-sellers__title">BEST-SELLERS</h2>
 
                 <div class="best-sellers__content">
-                    <div class="best-sellers__carousel" data-js="embla">
-                        <div
-                            class="best-sellers__dots"
-                            data-js="embla-dots"
-                        ></div>
+                    <div class="carousel" data-js="embla">
+                        <div class="carousel__dots" data-js="embla-dots"></div>
 
                         <div
-                            class="best-sellers__viewport"
+                            class="carousel__viewport"
                             data-js="embla-viewport"
                         >
-                            <div
-                                class="best-sellers__container embla__container"
-                            >
-                                <div class="best-sellers__slide embla__slide">
+                            <div class="carousel__container embla__container">
+                                <div class="carousel__slide embla__slide">
                                     <img
-                                        class="best-sellers__book"
+                                        class="carousel__book"
                                         src="/assets/images/books/angular.webp"
                                         alt="Angular book"
                                     />
                                 </div>
 
-                                <div class="best-sellers__slide embla__slide">
+                                <div class="carousel__slide embla__slide">
                                     <img
-                                        class="best-sellers__book"
+                                        class="carousel__book"
                                         src="/assets/images/books/construct2.webp"
                                         alt="Construct 2 book"
                                     />
                                 </div>
 
-                                <div class="best-sellers__slide embla__slide">
+                                <div class="carousel__slide embla__slide">
                                     <img
-                                        class="best-sellers__book"
+                                        class="carousel__book"
                                         src="/assets/images/books/apacheKafka.webp"
                                         alt="Apache Kafka book"
                                     />
                                 </div>
 
-                                <div class="best-sellers__slide embla__slide">
+                                <div class="carousel__slide embla__slide">
                                     <img
-                                        class="best-sellers__book"
+                                        class="carousel__book"
                                         src="/assets/images/books/lideranca.webp"
                                         alt="Lideranca em Design book"
                                     />
                                 </div>
 
-                                <div class="best-sellers__slide embla__slide">
+                                <div class="carousel__slide embla__slide">
                                     <img
-                                        class="best-sellers__book"
+                                        class="carousel__book"
                                         src="/assets/images/books/javascript.webp"
                                         alt="Javascript Assertivo book"
                                     />
                                 </div>
 
-                                <div class="best-sellers__slide embla__slide">
+                                <div class="carousel__slide embla__slide">
                                     <img
-                                        class="best-sellers__book"
+                                        class="carousel__book"
                                         src="/assets/images/books/mean.webp"
                                         alt="Mean Fullstack book"
                                     />
@@ -371,11 +367,12 @@
                             </div>
                         </div>
 
-                        <div class="best-sellers__controls">
+                        <div class="carousel__controls">
                             <button
-                                class="best-sellers__arrow best-sellers__arrow--prev embla__button embla__button--prev"
+                                class="carousel__arrow carousel__arrow--prev embla__button embla__button--prev"
                                 data-js="embla-prev"
                                 type="button"
+                                aria-label="Previous slide"
                             >
                                 <i
                                     class="icon-arrow_left"
@@ -384,9 +381,10 @@
                             </button>
 
                             <button
-                                class="best-sellers__arrow best-sellers__arrow--next embla__button embla__button--next"
+                                class="carousel__arrow carousel__arrow--next embla__button embla__button--next"
                                 data-js="embla-next"
                                 type="button"
+                                aria-label="Next slide"
                             >
                                 <i
                                     class="icon-arrow_right"
@@ -396,7 +394,7 @@
                         </div>
                     </div>
 
-                    <article class="book-card">
+                    <article class="book-card book-card--author">
                         <div class="book-card__content">
                             <div class="book-card__info">
                                 <div class="book-card__stars">
@@ -422,7 +420,7 @@
                             </div>
 
                             <img
-                                class="book-card__image"
+                                class="book-card__image book-card__image--author"
                                 src="/assets/images/author-of-the-month.webp"
                                 alt="Juliana Agarikov"
                             />
@@ -450,7 +448,10 @@
                                 </button>
                             </div>
 
-                            <button class="book-card__learn-more" type="button">
+                            <button
+                                class="book-card__learn-more book-card__learn-more--author"
+                                type="button"
+                            >
                                 Learn more
                             </button>
                         </div>
