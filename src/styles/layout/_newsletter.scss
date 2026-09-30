@@ -77,12 +77,11 @@
     }
 
     &__input-wrapper {
-        @include flex($justify: flex-start);
+        @include flex($justify: flex-start, $gap: to-rem(10px));
 
         width: 100%;
         height: to-rem(44px);
         padding: to-rem(10px) to-rem(24px);
-        gap: to-rem(10px);
         border: 1px solid $color-gradient-start;
         border-radius: to-rem(24px);
     }
