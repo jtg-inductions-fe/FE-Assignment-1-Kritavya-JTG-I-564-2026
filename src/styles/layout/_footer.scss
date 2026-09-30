@@ -1,0 +1,90 @@
+@use '../abstracts' as *;
+
+.footer {
+    margin-top: to-rem(4px);
+    border-top: 1px solid $color-footer-heading;
+    background-color: $color-background-footer;
+
+    &__container {
+        width: 100%;
+        padding: to-rem(16px) to-rem(24px);
+
+        @include respond-to('tablet') {
+            @include flex($justify: space-between, $align: stretch);
+            padding: to-rem(56px) to-rem(24px);
+            max-width: to-rem(1024px);
+            margin: to-rem(4px) auto;
+        }
+
+        @include respond-to('desktop') {
+            max-width: to-rem(1350px);
+            margin-top: 2px;
+        }
+    }
+
+    &__brand {
+        @include respond-to('tablet') {
+            font-size: $size-lg;
+        }
+    }
+
+    &__columns {
+        display: none;
+
+        @include respond-to('tablet') {
+            @include flex($justify: space-between, $align: flex-start);
+
+            width: to-rem(730px);
+            padding-right: to-rem(16px);
+        }
+
+        @include respond-to('desktop') {
+            width: to-rem(1040px);
+            padding-right: 0;
+        }
+    }
+
+    &__column {
+        @include respond-to('tablet') {
+            width: to-rem(210px);
+        }
+
+        @include respond-to('desktop') {
+            width: to-rem(245px);
+            border-left: 1px solid $color-footer-heading;
+            padding-left: to-rem(18px);
+            min-height: to-rem(394px);
+        }
+    }
+
+    &__heading {
+        @include respond-to('tablet') {
+            margin: 0 0 to-rem(25px);
+            color: $color-footer-heading;
+            font-size: $size-sm;
+            font-weight: $weight-regular;
+        }
+    }
+
+    &__list {
+        @include respond-to('tablet') {
+            @include flex(
+                $direction: column,
+                $align: flex-start,
+                $gap: to-rem(16px)
+            );
+        }
+    }
+
+    &__link {
+        @include respond-to('tablet') {
+            @include flex($justify: flex-start, $gap: to-rem(8px));
+            color: $color-footer-text;
+            font-size: $size-sm;
+        }
+    }
+
+    @include respond-to('tablet') {
+        margin-top: 0;
+    }
+}
