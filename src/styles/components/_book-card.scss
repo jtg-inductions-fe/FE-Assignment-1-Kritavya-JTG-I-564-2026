@@ -1,12 +1,15 @@
 @use '../abstracts' as *;
 
 .book-card {
+    @include flex($align: stretch, $justify: space-between, $direction: column);
+
     margin: to-rem(16px) to-rem(24px) 0;
     padding: to-rem(18px) to-rem(16px);
     background-color: $color-background-page;
     border-radius: to-rem(10px);
     box-shadow: 0 to-rem(4px) to-rem(4px) rgba(0, 0, 0, 0.25);
     max-width: to-rem(588px);
+    min-height: to-rem(285px);
 
     &__content {
         @include flex($align: stretch, $justify: space-between);
@@ -42,6 +45,13 @@
         }
     }
 
+    &__stars {
+        display: flex;
+        gap: to-rem(4px);
+        margin-bottom: to-rem(8px);
+        font-size: $size-base;
+    }
+
     &__title {
         margin: 0 0 to-rem(8px);
         color: $color-gradient-start;
@@ -50,7 +60,7 @@
     }
 
     &__description {
-        padding-right: to-rem(40px);
+        padding-right: to-rem(24px);
         color: rgba(0, 0, 0, 0.85);
         font-size: $size-sm;
         font-weight: $weight-regular;
@@ -72,6 +82,13 @@
         @include respond-to('tablet') {
             width: to-rem(148px);
             height: to-rem(148px);
+        }
+
+        &--author {
+            @include respond-to('tablet') {
+                width: to-rem(160px);
+                height: to-rem(160px);
+            }
         }
     }
 
@@ -124,15 +141,32 @@
         @include respond-to('tablet') {
             width: to-rem(148px);
         }
+
+        &--author {
+            @include respond-to('tablet') {
+                width: to-rem(160px);
+            }
+        }
+    }
+
+    &--author {
+        margin-top: to-rem(30px);
     }
 
     @include respond-to('tablet') {
-        margin: to-rem(62px) 0 to-rem(16px);
+        min-height: to-rem(266px);
+        margin: to-rem(58px) 0 to-rem(16px);
         padding: to-rem(28px) to-rem(24px) to-rem(24px) to-rem(18px);
     }
 
     @include respond-to('desktop') {
         margin-top: to-rem(50px);
         padding: to-rem(16px) to-rem(18px) to-rem(16px) to-rem(20px);
+        min-height: to-rem(278px);
+        min-width: to-rem(588px);
+
+        &--author {
+            padding-top: to-rem(32px);
+        }
     }
 }

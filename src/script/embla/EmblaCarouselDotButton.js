@@ -6,6 +6,12 @@
 export const addDotButtonAndClickHandlers = (emblaApi, dotsNode) => {
     let dotNodes = [];
 
+    const dotClass = dotsNode
+        .closest('[data-js="embla"]')
+        .classList.contains('best-sellers')
+        ? 'best-sellers__dot'
+        : 'latest-releases__dot';
+
     const addDotBtnsWithClickHandlers = () => {
         dotsNode.innerHTML = emblaApi
             .scrollSnapList()
