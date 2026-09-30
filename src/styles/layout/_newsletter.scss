@@ -1,0 +1,116 @@
+@use '../abstracts' as *;
+
+.newsletter {
+    width: 100%;
+    padding: to-rem(24px);
+
+    &__content {
+        @include flex($direction: column);
+
+        max-width: to-rem(381px);
+        margin: 0 auto;
+
+        @include respond-to('tablet') {
+            @include flex($justify: space-between);
+
+            max-width: to-rem(725px);
+        }
+
+        @include respond-to('desktop') {
+            max-width: to-rem(774px);
+            align-items: stretch;
+        }
+    }
+
+    &__info {
+        width: 100%;
+
+        @include respond-to('tablet') {
+            width: to-rem(376px);
+        }
+    }
+
+    &__title {
+        margin: 0 0 to-rem(8px);
+        color: $color-gradient-start;
+        font-size: to-rem(18px);
+        font-weight: $weight-medium;
+
+        @include respond-to('tablet') {
+            margin-bottom: to-rem(16px);
+            font-size: $size-lg;
+        }
+
+        @include respond-to('desktop') {
+            margin-bottom: to-rem(4px);
+        }
+    }
+
+    &__description {
+        margin: 0;
+        color: $color-gradient-start;
+        font-size: $size-base;
+        font-weight: $weight-light;
+
+        @include respond-to('tablet') {
+            padding-right: to-rem(40px);
+        }
+
+        @include respond-to('desktop') {
+            padding-right: 0;
+        }
+    }
+
+    &__form {
+        width: 100%;
+        margin-top: to-rem(24px);
+
+        @include respond-to('tablet') {
+            width: to-rem(327px);
+            margin-top: 0;
+        }
+
+        @include respond-to('desktop') {
+            width: to-rem(350px);
+            margin-top: to-rem(20px);
+        }
+    }
+
+    &__input-wrapper {
+        @include flex($justify: flex-start);
+
+        width: 100%;
+        height: to-rem(44px);
+        padding: to-rem(10px) to-rem(24px);
+        gap: to-rem(10px);
+        border: 1px solid $color-gradient-start;
+        border-radius: to-rem(24px);
+    }
+
+    &__icon {
+        flex-shrink: 0;
+        color: $color-gradient-start;
+        font-size: to-rem(24px);
+    }
+
+    &__input {
+        width: 100%;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-family: $font-main;
+        font-size: $size-base;
+
+        &::placeholder {
+            color: $color-gradient-start;
+        }
+    }
+
+    @include respond-to('tablet') {
+        padding: to-rem(32px) to-rem(24px) to-rem(48px);
+    }
+
+    @include respond-to('desktop') {
+        padding: to-rem(64px) to-rem(24px) to-rem(28px);
+    }
+}
