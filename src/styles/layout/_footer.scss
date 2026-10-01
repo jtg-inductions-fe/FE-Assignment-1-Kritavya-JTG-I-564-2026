@@ -28,7 +28,7 @@
         }
     }
 
-    &__columns {
+    &__grid {
         display: none;
 
         @include respond-to('tablet') {
