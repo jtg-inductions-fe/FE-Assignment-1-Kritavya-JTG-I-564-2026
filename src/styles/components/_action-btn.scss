@@ -3,8 +3,6 @@
 .action-btn {
     @include flex;
 
-    color: $color-gradient-start;
-
     &__icon {
         font-size: $size-xl;
     }
@@ -15,6 +13,12 @@
         @include respond-to('desktop') {
             display: inline;
             font-size: $size-md;
+        }
+    }
+
+    &--mobile-only {
+        @include respond-to('tablet') {
+            display: none;
         }
     }
 

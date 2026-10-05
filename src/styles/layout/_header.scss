@@ -84,10 +84,4 @@
             gap: px-to-rem(124);
         }
     }
-
-    &__action-item--favorites {
-        @include respond-to('tablet') {
-            display: none;
-        }
-    }
 }
