@@ -6,13 +6,13 @@
     }
 
     &__logo-icon {
-        font-size: to-rem(40px);
+        font-size: px-to-rem(40);
     }
 
     &__title {
         display: none;
         font-family: $font-brand;
-        font-size: to-rem(30px);
+        font-size: px-to-rem(30);
         font-weight: $weight-regular;
 
         &--emphasis {
@@ -21,8 +21,8 @@
 
         @include respond-to('tablet') {
             display: block;
-            padding-top: to-rem(8px);
-            padding-left: to-rem(10px);
+            padding-top: px-to-rem(8);
+            padding-left: px-to-rem(10);
         }
     }
 }

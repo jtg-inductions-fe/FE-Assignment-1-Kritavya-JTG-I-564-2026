@@ -1,4 +1,4 @@
-@use './functions' as fun;
+@use './functions' as *;
 
 // Breakpoints
 $breakpoints: (
@@ -46,10 +46,10 @@ $gradient-primary: linear-gradient(
 );
 
 // Font Sizes (Input as px, compiled to rem)
-$size-xs: fun.to-rem(12px);
-$size-sm: fun.to-rem(14px);
-$size-base: fun.to-rem(16px);
-$size-md: fun.to-rem(20px);
-$size-lg: fun.to-rem(24px);
-$size-xl: fun.to-rem(32px);
-$size-xxl: fun.to-rem(48px);
+$size-xs: px-to-rem(12);
+$size-sm: px-to-rem(14);
+$size-base: px-to-rem(16);
+$size-md: px-to-rem(20);
+$size-lg: px-to-rem(24);
+$size-xl: px-to-rem(32);
+$size-xxl: px-to-rem(48);

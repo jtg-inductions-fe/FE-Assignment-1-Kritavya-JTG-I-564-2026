@@ -1,23 +1,23 @@
 @use '../abstracts' as *;
 
 .footer {
-    margin-top: to-rem(4px);
+    margin-top: px-to-rem(4);
     border-top: 1px solid $color-footer-heading;
     background-color: $color-background-footer;
 
     &__container {
         width: 100%;
-        padding: to-rem(16px) to-rem(24px);
+        padding: px-to-rem(16) px-to-rem(24);
 
         @include respond-to('tablet') {
             @include flex($justify: space-between, $align: stretch);
-            padding: to-rem(56px) to-rem(24px);
-            max-width: to-rem(1024px);
-            margin: to-rem(4px) auto;
+            padding: px-to-rem(56) px-to-rem(24);
+            max-width: px-to-rem(1024);
+            margin: px-to-rem(4) auto;
         }
 
         @include respond-to('desktop') {
-            max-width: to-rem(1350px);
+            max-width: px-to-rem(1350);
             margin-top: 2px;
         }
     }
@@ -34,32 +34,32 @@
         @include respond-to('tablet') {
             @include flex($justify: space-between, $align: flex-start);
 
-            width: to-rem(730px);
-            padding-right: to-rem(16px);
+            width: px-to-rem(730);
+            padding-right: px-to-rem(16);
         }
 
         @include respond-to('desktop') {
-            width: to-rem(1040px);
+            width: px-to-rem(1040);
             padding-right: 0;
         }
     }
 
     &__column {
         @include respond-to('tablet') {
-            width: to-rem(210px);
+            width: px-to-rem(210);
         }
 
         @include respond-to('desktop') {
-            width: to-rem(245px);
+            width: px-to-rem(245);
             border-left: 1px solid $color-footer-heading;
-            padding-left: to-rem(18px);
-            min-height: to-rem(394px);
+            padding-left: px-to-rem(18);
+            min-height: px-to-rem(394);
         }
     }
 
     &__heading {
         @include respond-to('tablet') {
-            margin: 0 0 to-rem(25px);
+            margin: 0 0 px-to-rem(25);
             color: $color-footer-heading;
             font-size: $size-sm;
             font-weight: $weight-regular;
@@ -71,14 +71,14 @@
             @include flex(
                 $direction: column,
                 $align: flex-start,
-                $gap: to-rem(16px)
+                $gap: px-to-rem(16)
             );
         }
     }
 
     &__link {
         @include respond-to('tablet') {
-            @include flex($justify: flex-start, $gap: to-rem(8px));
+            @include flex($justify: flex-start, $gap: px-to-rem(8));
             color: $color-footer-text;
             font-size: $size-sm;
         }

@@ -1,18 +1,18 @@
 @use '../abstracts' as *;
 
 .latest-releases {
-    padding-top: to-rem(20px);
+    padding-top: px-to-rem(20);
 
     &__title {
-        margin: 0 0 to-rem(8px);
+        margin: 0 0 px-to-rem(8);
         color: $color-text-secondary;
-        font-size: to-rem(18px);
+        font-size: px-to-rem(18);
         font-weight: $weight-bold;
         text-align: center;
 
         @include respond-to('tablet') {
-            margin: 0 0 to-rem(12px);
-            font-size: to-rem(26px);
+            margin: 0 0 px-to-rem(12);
+            font-size: px-to-rem(26);
         }
 
         @include respond-to('desktop') {
@@ -24,24 +24,24 @@
         @include flex($justify: space-between, $direction: column);
 
         width: 100%;
-        padding: to-rem(14px) 0 to-rem(24px);
+        padding: px-to-rem(14) 0 px-to-rem(24);
         background-color: $color-background-section;
 
         @include respond-to('tablet') {
-            padding: to-rem(34px) 0;
+            padding: px-to-rem(34) 0;
         }
 
         @include respond-to('desktop') {
             flex-direction: row;
-            padding: to-rem(70px) to-rem(180px) to-rem(105px);
+            padding: px-to-rem(70) px-to-rem(180) px-to-rem(105);
         }
     }
 
     @include respond-to('tablet') {
-        padding-top: to-rem(56px);
+        padding-top: px-to-rem(56);
     }
 
     @include respond-to('desktop') {
-        padding-top: to-rem(46px);
+        padding-top: px-to-rem(46);
     }
 }

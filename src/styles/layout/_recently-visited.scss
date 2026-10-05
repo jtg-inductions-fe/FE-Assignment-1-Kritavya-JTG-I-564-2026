@@ -4,11 +4,11 @@
     @include flex($direction: column);
 
     width: 100%;
-    margin-top: to-rem(12px);
-    min-height: to-rem(295px);
-    padding: to-rem(24px) 0;
+    margin-top: px-to-rem(12);
+    min-height: px-to-rem(295);
+    padding: px-to-rem(24) 0;
     background: $gradient-primary;
-    gap: to-rem(32px);
+    gap: px-to-rem(32);
 
     &__title {
         width: 100%;
@@ -32,14 +32,14 @@
         @include flex($justify: center);
 
         flex-wrap: wrap;
-        gap: to-rem(16px);
-        max-width: to-rem(430px);
+        gap: px-to-rem(16);
+        max-width: px-to-rem(430);
 
         @include respond-to('tablet') {
-            max-width: to-rem(900px);
-            min-height: to-rem(192px);
-            padding-top: to-rem(8px);
-            gap: to-rem(24px);
+            max-width: px-to-rem(900);
+            min-height: px-to-rem(192);
+            padding-top: px-to-rem(8);
+            gap: px-to-rem(24);
         }
 
         @include respond-to('desktop') {
@@ -50,10 +50,10 @@
     @include respond-to('tablet') {
         margin-top: 0;
         padding: 0;
-        min-height: to-rem(330px);
+        min-height: px-to-rem(330);
     }
 
     @include respond-to('desktop') {
-        min-height: to-rem(418px);
+        min-height: px-to-rem(418);
     }
 }

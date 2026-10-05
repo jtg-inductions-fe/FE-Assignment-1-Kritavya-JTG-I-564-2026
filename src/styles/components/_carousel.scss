@@ -7,22 +7,22 @@
     &__dots {
         @include flex;
 
-        gap: to-rem(8px);
-        margin-bottom: to-rem(16px);
+        gap: px-to-rem(8);
+        margin-bottom: px-to-rem(16);
 
         @include respond-to('tablet') {
-            gap: to-rem(12px);
-            margin-bottom: to-rem(76px);
+            gap: px-to-rem(12);
+            margin-bottom: px-to-rem(76);
         }
 
         @include respond-to('desktop') {
-            margin-bottom: to-rem(36px);
+            margin-bottom: px-to-rem(36);
         }
     }
 
     &__dot {
-        width: to-rem(8px);
-        height: to-rem(8px);
+        width: px-to-rem(8);
+        height: px-to-rem(8);
         padding: 0;
         border: 0;
         border-radius: 50%;
@@ -34,8 +34,8 @@
         }
 
         @include respond-to('tablet') {
-            width: to-rem(12px);
-            height: to-rem(12px);
+            width: px-to-rem(12);
+            height: px-to-rem(12);
         }
     }
 
@@ -55,7 +55,7 @@
 
         flex: 0 0 47%;
         min-width: 0;
-        padding-inline: to-rem(8px);
+        padding-inline: px-to-rem(8);
 
         @include respond-to('tablet') {
             flex: 0 0 33.333%;
@@ -64,19 +64,19 @@
 
     &__book {
         display: block;
-        width: to-rem(180px);
+        width: px-to-rem(180);
         height: auto;
         aspect-ratio: 179 / 249;
         object-fit: fill;
-        box-shadow: to-rem(2px) to-rem(4px) to-rem(8px) rgba(0, 0, 0, 0.15);
+        box-shadow: px-to-rem(2) px-to-rem(4) px-to-rem(8) rgba(0, 0, 0, 0.15);
 
         @include respond-to('tablet') {
-            width: to-rem(190px);
+            width: px-to-rem(190);
         }
 
         @include respond-to('desktop') {
-            width: to-rem(180px);
-            height: to-rem(254px);
+            width: px-to-rem(180);
+            height: px-to-rem(254);
         }
     }
 
@@ -89,7 +89,11 @@
         align-items: center;
         justify-content: space-between;
         pointer-events: none;
-        transform: translateY(-75%);
+        transform: translateY(-50%);
+
+        @include respond-to('desktop') {
+            transform: translateY(-75%);
+        }
     }
 
     &__arrow {
@@ -98,13 +102,10 @@
         @include respond-to('tablet') {
             @include flex;
 
-            width: to-rem(50px);
-            height: to-rem(50px);
-            padding: 0;
-            border: 0;
+            width: px-to-rem(50);
+            height: px-to-rem(50);
             border-radius: 50%;
             background-color: $color-gradient-start;
-            color: $color-text-inverse;
             cursor: pointer;
             pointer-events: auto;
 
@@ -116,11 +117,11 @@
     }
 
     @include respond-to('tablet') {
-        max-width: to-rem(800px);
+        max-width: px-to-rem(800);
     }
 
     @include respond-to('desktop') {
-        max-width: to-rem(740px);
-        height: to-rem(310px);
+        max-width: px-to-rem(740);
+        height: px-to-rem(310);
     }
 }

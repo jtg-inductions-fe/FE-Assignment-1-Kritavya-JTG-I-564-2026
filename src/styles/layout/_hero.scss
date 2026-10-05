@@ -1,8 +1,8 @@
 @use '../abstracts' as *;
 
 .hero {
-    min-height: to-rem(215px);
-    padding: to-rem(32px) to-rem(24px);
+    min-height: px-to-rem(215);
+    padding: px-to-rem(32) px-to-rem(24);
     background: $gradient-primary;
     color: $color-text-inverse;
     text-align: center;
@@ -11,55 +11,55 @@
         @include flex($justify: center, $direction: column);
 
         @include respond-to('tablet') {
-            margin-top: to-rem(48px);
+            margin-top: px-to-rem(48);
         }
     }
 
     &__title {
-        margin-bottom: to-rem(8px);
-        font-size: to-rem(18px);
+        margin-bottom: px-to-rem(8);
+        font-size: px-to-rem(18);
         font-weight: $weight-bold;
 
         @include respond-to('tablet') {
-            font-size: to-rem(36px);
+            font-size: px-to-rem(36);
         }
     }
 
     &__description {
-        max-width: to-rem(316px);
-        margin-bottom: to-rem(24px);
+        max-width: px-to-rem(316);
+        margin-bottom: px-to-rem(24);
         font-size: $size-base;
         font-weight: $weight-medium;
 
         @include respond-to('tablet') {
-            max-width: to-rem(479px);
+            max-width: px-to-rem(479);
         }
     }
 
     &__search {
         @include flex;
         width: 100%;
-        max-width: to-rem(380px);
-        height: to-rem(44px);
+        max-width: px-to-rem(380);
+        height: px-to-rem(44);
         margin: 0 auto;
-        padding: 0 to-rem(24px);
+        padding: 0 px-to-rem(24);
         border: 1px solid $color-text-inverse;
-        border-radius: to-rem(24px);
+        border-radius: px-to-rem(24);
         background: transparent;
 
         @include respond-to('tablet') {
-            max-width: to-rem(476px);
-            height: to-rem(56px);
+            max-width: px-to-rem(476);
+            height: px-to-rem(56);
         }
 
         @include respond-to('desktop') {
-            max-width: to-rem(586px);
+            max-width: px-to-rem(586);
         }
     }
 
     &__search-wrapper {
         @include flex;
-        gap: to-rem(16px);
+        gap: px-to-rem(16);
         width: 100%;
     }
 
@@ -73,7 +73,7 @@
     }
 
     &__search-text {
-        width: to-rem(200px);
+        width: px-to-rem(200);
         min-width: 0;
         padding: 0;
         border: none;
@@ -84,7 +84,7 @@
         font-size: $size-sm;
 
         @include respond-to('tablet') {
-            width: to-rem(228px);
+            width: px-to-rem(228);
             font-size: $size-base;
         }
 
@@ -99,6 +99,6 @@
     }
 
     @include respond-to('tablet') {
-        min-height: to-rem(325px);
+        min-height: px-to-rem(325);
     }
 }

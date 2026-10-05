@@ -2,22 +2,22 @@
 
 .newsletter {
     width: 100%;
-    padding: to-rem(24px);
+    padding: px-to-rem(24);
 
     &__content {
         @include flex($direction: column);
 
-        max-width: to-rem(381px);
+        max-width: px-to-rem(381);
         margin: 0 auto;
 
         @include respond-to('tablet') {
             @include flex($justify: space-between);
 
-            max-width: to-rem(725px);
+            max-width: px-to-rem(725);
         }
 
         @include respond-to('desktop') {
-            max-width: to-rem(774px);
+            max-width: px-to-rem(774);
             align-items: stretch;
         }
     }
@@ -26,23 +26,23 @@
         width: 100%;
 
         @include respond-to('tablet') {
-            width: to-rem(376px);
+            width: px-to-rem(376);
         }
     }
 
     &__title {
-        margin: 0 0 to-rem(8px);
+        margin: 0 0 px-to-rem(8);
         color: $color-gradient-start;
-        font-size: to-rem(18px);
+        font-size: px-to-rem(18);
         font-weight: $weight-medium;
 
         @include respond-to('tablet') {
-            margin-bottom: to-rem(16px);
+            margin-bottom: px-to-rem(16);
             font-size: $size-lg;
         }
 
         @include respond-to('desktop') {
-            margin-bottom: to-rem(4px);
+            margin-bottom: px-to-rem(4);
         }
     }
 
@@ -53,7 +53,7 @@
         font-weight: $weight-light;
 
         @include respond-to('tablet') {
-            padding-right: to-rem(40px);
+            padding-right: px-to-rem(40);
         }
 
         @include respond-to('desktop') {
@@ -63,33 +63,33 @@
 
     &__form {
         width: 100%;
-        margin-top: to-rem(24px);
+        margin-top: px-to-rem(24);
 
         @include respond-to('tablet') {
-            width: to-rem(327px);
+            width: px-to-rem(327);
             margin-top: 0;
         }
 
         @include respond-to('desktop') {
-            width: to-rem(350px);
-            margin-top: to-rem(20px);
+            width: px-to-rem(350);
+            margin-top: px-to-rem(20);
         }
     }
 
     &__input-wrapper {
-        @include flex($justify: flex-start, $gap: to-rem(10px));
+        @include flex($justify: flex-start, $gap: px-to-rem(10));
 
         width: 100%;
-        height: to-rem(44px);
-        padding: to-rem(10px) to-rem(24px);
+        height: px-to-rem(44);
+        padding: px-to-rem(10) px-to-rem(24);
         border: 1px solid $color-gradient-start;
-        border-radius: to-rem(24px);
+        border-radius: px-to-rem(24);
     }
 
     &__icon {
         flex-shrink: 0;
         color: $color-gradient-start;
-        font-size: to-rem(24px);
+        font-size: px-to-rem(24);
     }
 
     &__input {
@@ -106,10 +106,10 @@
     }
 
     @include respond-to('tablet') {
-        padding: to-rem(32px) to-rem(24px) to-rem(48px);
+        padding: px-to-rem(32) px-to-rem(24) px-to-rem(48);
     }
 
     @include respond-to('desktop') {
-        padding: to-rem(64px) to-rem(24px) to-rem(28px);
+        padding: px-to-rem(64) px-to-rem(24) px-to-rem(28);
     }
 }

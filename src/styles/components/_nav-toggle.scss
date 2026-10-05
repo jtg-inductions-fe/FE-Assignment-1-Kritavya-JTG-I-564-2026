@@ -4,8 +4,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: to-rem(80px);
-    height: to-rem(80px);
+    width: px-to-rem(80);
+    height: px-to-rem(80);
     background-color: transparent;
 
     &.is-open {
@@ -17,7 +17,7 @@
     }
 
     &__icon {
-        font-size: to-rem(36px);
+        font-size: px-to-rem(36);
     }
 
     @include respond-to('tablet') {
