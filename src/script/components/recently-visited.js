@@ -16,9 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
 
     function renderLayout() {
-        if (window.innerWidth >= 1024) {
+        if (window.innerWidth >= 1024 && container.innerHTML !== tabletHTML) {
             container.innerHTML = tabletHTML;
-        } else {
+        } else if (
+            window.innerWidth < 1024 &&
+            container.innerHTML !== mobileHTML
+        ) {
             container.innerHTML = mobileHTML;
         }
     }

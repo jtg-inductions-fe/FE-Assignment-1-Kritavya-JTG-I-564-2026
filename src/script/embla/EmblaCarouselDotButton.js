@@ -34,6 +34,7 @@ export const addDotButtonAndClickHandlers = (emblaApi, dotsNode) => {
 
     const toggleDotButtonsActive = () => {
         const selected = emblaApi.selectedScrollSnap();
+        const isTabletOrDesktop = window.innerWidth >= 1024;
 
         dotNodes.forEach((dotNode, index) => {
             const isSelected = index === selected;
@@ -44,6 +45,12 @@ export const addDotButtonAndClickHandlers = (emblaApi, dotsNode) => {
                 dotNode.setAttribute('aria-current', 'true');
             } else {
                 dotNode.removeAttribute('aria-current');
+            }
+
+            if (isTabletOrDesktop) {
+                dotNode.setAttribute('tabindex', '-1');
+            } else {
+                dotNode.removeAttribute('tabindex');
             }
         });
     };

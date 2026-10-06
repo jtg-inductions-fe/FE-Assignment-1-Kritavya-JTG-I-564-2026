@@ -19,4 +19,19 @@ emblaNodes.forEach((emblaNode) => {
 
     addPrevNextButtonClickHandlers(emblaApi, prevBtn, nextBtn);
     addDotButtonAndClickHandlers(emblaApi, dotsNode);
+
+    emblaNode.setAttribute('tabindex', '0');
+    emblaNode.setAttribute('role', 'region');
+    emblaNode.setAttribute(
+        'aria-roledescription',
+        'carousel, use left and right arrow keys to navigate slides',
+    );
+
+    emblaNode.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowLeft') {
+            emblaApi.scrollPrev();
+        } else if (event.key === 'ArrowRight') {
+            emblaApi.scrollNext();
+        }
+    });
 });

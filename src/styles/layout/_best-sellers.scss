@@ -1,32 +1,7 @@
 @use '../abstracts' as *;
 
 .best-sellers {
-    padding-top: px-to-rem(20);
-
-    &__title {
-        margin: 0 0 px-to-rem(8);
-        color: $color-text-secondary;
-        font-size: px-to-rem(18);
-        font-weight: $weight-bold;
-        text-align: center;
-
-        @include respond-to('tablet') {
-            margin: 0 0 px-to-rem(12);
-            font-size: px-to-rem(26);
-        }
-
-        @include respond-to('desktop') {
-            font-size: $size-xl;
-        }
-    }
-
     &__content {
-        @include flex($justify: space-between, $direction: column);
-
-        width: 100%;
-        padding: px-to-rem(14) 0 px-to-rem(24);
-        background-color: $color-background-section;
-
         @include respond-to('tablet') {
             padding: px-to-rem(34) 0 px-to-rem(28);
         }
@@ -35,9 +10,5 @@
             flex-direction: row;
             padding: px-to-rem(32) px-to-rem(160) px-to-rem(132) px-to-rem(180);
         }
-    }
-
-    @include respond-to('tablet') {
-        padding-top: px-to-rem(56);
     }
 }
