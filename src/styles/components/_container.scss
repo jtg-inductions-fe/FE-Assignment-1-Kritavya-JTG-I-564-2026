@@ -5,6 +5,6 @@
     margin-inline: auto;
 
     @include respond-to('tablet') {
-        padding-inline: to-rem(80px);
+        padding-inline: px-to-rem(80);
     }
 }

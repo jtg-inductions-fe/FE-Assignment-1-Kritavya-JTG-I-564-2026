@@ -1,43 +1,14 @@
 @use '../abstracts' as *;
 
 .best-sellers {
-    padding-top: to-rem(20px);
-
-    &__title {
-        margin: 0 0 to-rem(8px);
-        color: $color-text-secondary;
-        font-size: to-rem(18px);
-        font-weight: $weight-bold;
-        text-align: center;
-
-        @include respond-to('tablet') {
-            margin: 0 0 to-rem(12px);
-            font-size: to-rem(26px);
-        }
-
-        @include respond-to('desktop') {
-            font-size: $size-xl;
-        }
-    }
-
     &__content {
-        @include flex($justify: space-between, $direction: column);
-
-        width: 100%;
-        padding: to-rem(14px) 0 to-rem(24px);
-        background-color: $color-background-section;
-
         @include respond-to('tablet') {
-            padding: to-rem(34px) 0 to-rem(28px);
+            padding: px-to-rem(34) 0 px-to-rem(28);
         }
 
         @include respond-to('desktop') {
             flex-direction: row;
-            padding: to-rem(32px) to-rem(160px) to-rem(132px) to-rem(180px);
+            padding: px-to-rem(32) px-to-rem(160) px-to-rem(132) px-to-rem(180);
         }
-    }
-
-    @include respond-to('tablet') {
-        padding-top: to-rem(56px);
     }
 }

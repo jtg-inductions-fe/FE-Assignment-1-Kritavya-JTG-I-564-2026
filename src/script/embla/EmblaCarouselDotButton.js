@@ -17,7 +17,7 @@ export const addDotButtonAndClickHandlers = (emblaApi, dotsNode) => {
             .scrollSnapList()
             .map(
                 (_, index) =>
-                    `<button class="carousel__dot" type="button" aria-label="Go to slide ${index + 1}" aria-selected="false"></button>`,
+                    `<button class="carousel__dot ${dotClass}" type="button" aria-label="Go to slide ${index + 1}"></button>`,
             )
             .join('');
 
@@ -34,13 +34,24 @@ export const addDotButtonAndClickHandlers = (emblaApi, dotsNode) => {
 
     const toggleDotButtonsActive = () => {
         const selected = emblaApi.selectedScrollSnap();
+        const isTabletOrDesktop = window.innerWidth >= 1024;
 
         dotNodes.forEach((dotNode, index) => {
             const isSelected = index === selected;
 
             dotNode.classList.toggle('carousel__dot--selected', isSelected);
 
-            dotNode.setAttribute('aria-selected', String(isSelected));
+            if (isSelected) {
+                dotNode.setAttribute('aria-current', 'true');
+            } else {
+                dotNode.removeAttribute('aria-current');
+            }
+
+            if (isTabletOrDesktop) {
+                dotNode.setAttribute('tabindex', '-1');
+            } else {
+                dotNode.removeAttribute('tabindex');
+            }
         });
     };
 

@@ -3,8 +3,6 @@
 .action-btn {
     @include flex;
 
-    color: $color-gradient-start;
-
     &__icon {
         font-size: $size-xl;
     }
@@ -18,7 +16,13 @@
         }
     }
 
+    &--mobile-only {
+        @include respond-to('tablet') {
+            display: none;
+        }
+    }
+
     @include respond-to('desktop') {
-        gap: to-rem(8px);
+        gap: px-to-rem(8);
     }
 }

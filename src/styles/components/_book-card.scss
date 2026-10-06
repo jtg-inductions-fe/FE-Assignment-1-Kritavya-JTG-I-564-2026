@@ -3,21 +3,21 @@
 .book-card {
     @include flex($align: stretch, $justify: space-between, $direction: column);
 
-    margin: to-rem(16px) to-rem(24px) 0;
-    padding: to-rem(18px) to-rem(16px);
+    margin: px-to-rem(16) px-to-rem(24) 0;
+    padding: px-to-rem(18) px-to-rem(16);
     background-color: $color-background-page;
-    border-radius: to-rem(10px);
-    box-shadow: 0 to-rem(4px) to-rem(4px) rgba(0, 0, 0, 0.25);
-    max-width: to-rem(588px);
-    min-height: to-rem(285px);
+    border-radius: px-to-rem(10);
+    box-shadow: 0 px-to-rem(4) px-to-rem(4) rgba(0, 0, 0, 0.25);
+    max-width: px-to-rem(588);
+    min-height: px-to-rem(285);
 
     &__content {
         @include flex($align: stretch, $justify: space-between);
 
-        min-height: to-rem(188px);
+        min-height: px-to-rem(188);
 
         @include respond-to('tablet') {
-            min-height: to-rem(165px);
+            min-height: px-to-rem(165);
         }
     }
 
@@ -34,7 +34,7 @@
     }
 
     &__sub-title {
-        margin: 0 0 to-rem(8px);
+        margin: 0 0 px-to-rem(8);
         color: $color-text-secondary;
         font-size: $size-base;
         font-weight: $weight-bold;
@@ -47,20 +47,20 @@
 
     &__stars {
         display: flex;
-        gap: to-rem(4px);
-        margin-bottom: to-rem(8px);
+        gap: px-to-rem(4);
+        margin-bottom: px-to-rem(8);
         font-size: $size-base;
     }
 
     &__title {
-        margin: 0 0 to-rem(8px);
+        margin: 0 0 px-to-rem(8);
         color: $color-gradient-start;
-        font-size: to-rem(18px);
+        font-size: px-to-rem(18);
         font-weight: $weight-bold;
     }
 
     &__description {
-        padding-right: to-rem(24px);
+        padding-right: px-to-rem(24);
         color: rgba(0, 0, 0, 0.85);
         font-size: $size-sm;
         font-weight: $weight-regular;
@@ -70,24 +70,24 @@
         }
 
         @include respond-to('desktop') {
-            padding-right: to-rem(80px);
+            padding-right: px-to-rem(80);
         }
     }
 
     &__image {
-        width: to-rem(161px);
-        height: to-rem(168px);
+        width: px-to-rem(161);
+        height: px-to-rem(168);
         object-fit: cover;
 
         @include respond-to('tablet') {
-            width: to-rem(148px);
-            height: to-rem(148px);
+            width: px-to-rem(148);
+            height: px-to-rem(148);
         }
 
         &--author {
             @include respond-to('tablet') {
-                width: to-rem(160px);
-                height: to-rem(160px);
+                width: px-to-rem(160);
+                height: px-to-rem(160);
             }
         }
     }
@@ -95,41 +95,40 @@
     &__actions {
         @include flex($justify: space-between);
 
-        gap: to-rem(16px);
-        margin-top: to-rem(8px);
+        gap: px-to-rem(16);
+        margin-top: px-to-rem(8);
     }
 
     &__icons {
         @include flex($justify: flex-start);
 
-        gap: to-rem(4px);
+        gap: px-to-rem(4);
 
         @include respond-to('tablet') {
-            gap: to-rem(24px);
+            gap: px-to-rem(24);
         }
     }
 
     &__icon {
         @include flex;
 
-        width: to-rem(48px);
-        height: to-rem(48px);
-        padding: to-rem(8px);
-        border: 0;
+        width: px-to-rem(48);
+        height: px-to-rem(48);
+        padding: px-to-rem(8);
         cursor: pointer;
-        font-size: to-rem(28px);
+        font-size: px-to-rem(28);
 
         @include respond-to('tablet') {
             padding: 0;
-            width: to-rem(28px);
-            font-size: to-rem(28px);
+            width: px-to-rem(28);
+            font-size: px-to-rem(28);
         }
     }
 
-    &__learn-more {
-        width: to-rem(161px);
-        height: to-rem(48px);
-        padding: to-rem(8px) to-rem(16px);
+    &__button {
+        width: px-to-rem(161);
+        height: px-to-rem(48);
+        padding: px-to-rem(8) px-to-rem(16);
         border: 0;
         background-color: $color-text-secondary;
         color: $color-text-inverse;
@@ -139,34 +138,34 @@
         cursor: pointer;
 
         @include respond-to('tablet') {
-            width: to-rem(148px);
+            width: px-to-rem(148);
         }
 
         &--author {
             @include respond-to('tablet') {
-                width: to-rem(160px);
+                width: px-to-rem(160);
             }
         }
     }
 
     &--author {
-        margin-top: to-rem(30px);
+        margin-top: px-to-rem(30);
     }
 
     @include respond-to('tablet') {
-        min-height: to-rem(266px);
-        margin: to-rem(58px) 0 to-rem(16px);
-        padding: to-rem(28px) to-rem(24px) to-rem(24px) to-rem(18px);
+        min-height: px-to-rem(266);
+        margin: px-to-rem(58) 0 px-to-rem(16);
+        padding: px-to-rem(28) px-to-rem(24) px-to-rem(24) px-to-rem(18);
     }
 
     @include respond-to('desktop') {
-        margin-top: to-rem(50px);
-        padding: to-rem(16px) to-rem(18px) to-rem(16px) to-rem(20px);
-        min-height: to-rem(278px);
-        min-width: to-rem(588px);
+        margin-top: px-to-rem(50);
+        padding: px-to-rem(16) px-to-rem(18) px-to-rem(16) px-to-rem(20);
+        min-height: px-to-rem(278);
+        min-width: px-to-rem(588);
 
         &--author {
-            padding-top: to-rem(32px);
+            padding-top: px-to-rem(32);
         }
     }
 }

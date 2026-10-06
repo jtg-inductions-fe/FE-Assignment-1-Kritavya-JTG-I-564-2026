@@ -3,15 +3,15 @@
 .button {
     @include flex;
 
-    padding: to-rem(16px) to-rem(24px);
-    min-height: to-rem(53px);
+    padding: px-to-rem(16) px-to-rem(24);
+    min-height: px-to-rem(53);
     background-color: $color-text-secondary;
     color: $color-text-inverse;
     font-size: $size-sm;
     font-weight: $weight-bold;
 
     @include respond-to('tablet') {
-        padding: to-rem(24px) to-rem(32px);
+        padding: px-to-rem(24) px-to-rem(32);
         font-size: $size-lg;
     }
 }
