@@ -13,30 +13,5 @@
     @include respond-to('tablet') {
         padding: px-to-rem(24) px-to-rem(32);
         font-size: $size-lg;
-
-        &--android {
-            order: 1;
-        }
-        &--oo {
-            order: 2;
-        }
-        &--marketing {
-            order: 3;
-        }
-        &--agile {
-            order: 4;
-        }
-        &--startups {
-            order: 5;
-        }
-        &--html-css {
-            order: 6;
-        }
-        &--java {
-            order: 7;
-        }
-        &--python {
-            order: 8;
-        }
     }
 }
